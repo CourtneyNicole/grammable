@@ -1,6 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe GramsController, type: :controller do
+
+  describe "grams#picture action" do 
+    it "should allow users to upload pictures" do
+      gram = FactoryBot.create(:gram)
+      get :picture
+      expect(response).to redirect_to root_path
+    end 
+  end
+
+
    describe "grams#destroy action" do
     it "shouldn't allow users who didn't create the gram to destroy it" do
       gram = FactoryBot.create(:gram)
