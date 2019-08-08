@@ -12,7 +12,7 @@ RSpec.describe CommentsController, type: :controller do
 
       expect(response).to redirect_to root_path
       expect(gram.comments.length).to eq 1
-      expect(gram.comments.first.message).to eq "awesome gem"
+      expect(gram.comments.first.message).to eq "awesome gram"
 
     end
 
